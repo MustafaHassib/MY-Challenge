@@ -1,0 +1,47 @@
+@use "../../styles/colors";
+
+.about_me {
+  .image_wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      left: 0;
+      right: 0;
+      background-color: #1b1b1b;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      z-index: -1;
+    }
+    .person_image {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__subtitle {
+    color: colors.$text_gray;
+    font-size: 1.3rem;
+  }
+  &__body {
+    h2 {
+      color: #ffffff;
+    }
+
+    &__desc {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      line-height: 2;
+      color: colors.$text_gray;
+    }
+
+    button {
+      transition: background-color 0.3s ease;
+    }
+  }
+}
