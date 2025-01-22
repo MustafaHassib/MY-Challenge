@@ -5,7 +5,7 @@ import HeroSection from "@/sections/hero_section/hero";
 import Portfolio from "@/sections/portfolio/portfolio";
 import Services from "@/sections/services_section/services";
 
-export const Home = () => (
+const Home = () => (
   <div>
     <HeroSection />
     <Services />
@@ -15,5 +15,4 @@ export const Home = () => (
     <Footer />
   </div>
 );
-
 export default Home;
