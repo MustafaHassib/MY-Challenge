@@ -1,0 +1,77 @@
+.hero_section {
+  .image_wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      left: 0;
+      right: 0;
+      background-color: #1b1b1b;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .person_image {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .social_icons {
+    a {
+      background-color: #242424;
+      border-radius: 50%;
+      border: 0.5px solid lightgray;
+      transition: color 0.3s ease;
+      padding: 0.4rem;
+      &:hover {
+        color: #f97316;
+      }
+    }
+  }
+
+  .stats {
+    border-radius: 10px;
+    background-color: #1b1b1b;
+    .stat_card {
+      color: #f97316;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-color: #423f3e;
+        @media (max-width: 575.98px) {
+          height: 2px;
+          width: 80%;
+          top: auto;
+          bottom: 0;
+          transform: translateX(-10%);
+          left: auto;
+          right: auto;
+        }
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: #9ca3af;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
